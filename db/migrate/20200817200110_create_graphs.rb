@@ -3,7 +3,7 @@ class CreateGraphs < ActiveRecord::Migration[6.0]
     create_table :graphs do |t|
       t.string :image_url
       t.string :equation
-      t.array :answer_key
+      t.integer :answer_key, array: true, default: []
 
       t.timestamps
     end
