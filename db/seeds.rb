@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Graph.destroy_all
 
 Graph.create(image_url: 'https://imgur.com/9iAX9yK', equation: 'y = 2x + 3', m: 2, b: 3)
 Graph.create(image_url: 'https://imgur.com/0kG4JIn', equation: 'y = -5x + 6', m: -5, b: 6)
@@ -38,3 +39,6 @@ Graph.create(image_url: 'https://imgur.com/FWjExr8', equation: 'y = 2x - 8', m: 
 Graph.create(image_url: 'https://imgur.com/afVb5WH', equation: 'y = 5x - 1', m: 5, b: -1)
 Graph.create(image_url: 'https://imgur.com/xljA1ju', equation: 'y = -2x - 2', m: -2, b: -2)
 Graph.create(image_url: 'https://imgur.com/gyzifK1', equation: 'y = x + 5', m: 1, b: 5)
+
+
+
