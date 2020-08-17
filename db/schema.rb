@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(version: 2020_08_17_200110) do
   create_table "graphs", force: :cascade do |t|
     t.string "image_url"
     t.string "equation"
-    t.integer "answer_key"
+    t.integer "m"
+    t.integer "b"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
