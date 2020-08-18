@@ -34,3 +34,10 @@ Graph.create(image_url: 'https://imgur.com/gyzifK1', equation: 'y = x + 5', m: 1
 
 
 
+User.create(username: 'fox')
+User.create(username: 'yann')
+
+Session.create(score: 30, user_id: 1)
+Session.create(score: 40, user_id: 1)
+Session.create(score: 40, user_id: 2)
+Session.create(score: 30, user_id: 2)
