@@ -1,15 +1,18 @@
 class SessionsController < ApplicationController    
 
+    def index
+        sessions = Session.all
+        render json: sessions
+    end
     
     def new
         session = Session.new
     end
 
     def create
-        session = Session.create(session_params)
-        if session.save?
-            render json: session
-        end
+        session = Session.create(score: 0, user_id: params[:dataId])
+
+        render json: session
     end
     
     def edit
