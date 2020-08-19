@@ -11,9 +11,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
-
-    render json: user
+    user = User.find_or_create_by(user_params)
+    render json: user, include: :sessions
   end
 
   def edit
@@ -21,14 +20,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find_by(params[:username])
-    user.update(username: params[:username])
-    render json: user
+    user = User.find(params[:id])
+    user.update(username: params[:newUsername])
   end
 
   def destroy
-    user = User.find_by(params[:username])
-    user.destroy
+    user = User.find(params[:id])
+    user.delete
   end
 
 private
