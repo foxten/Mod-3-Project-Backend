@@ -5,6 +5,11 @@ class SessionsController < ApplicationController
         render json: sessions
     end
     
+    def show
+        session = Session.find(params[:id])
+        render json: session
+    end
+
     def new
         session = Session.new
     end
@@ -19,10 +24,9 @@ class SessionsController < ApplicationController
     end
 
     def update
-        session = Session.update(session_params)
-        if session.save?
-            render json: session
-        end
+        session = Session.find(params[:id])
+        session.update(score: params[:currentScore])
+        render json: session
     end
     
     def destroy

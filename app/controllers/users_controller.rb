@@ -22,6 +22,7 @@ class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     user.update(username: params[:newUsername])
+    render json: user, include: :sessions
   end
 
   def destroy
