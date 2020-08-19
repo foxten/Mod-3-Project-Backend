@@ -9,6 +9,11 @@ class SessionsController < ApplicationController
         session = Session.new
     end
 
+    def show
+        session = Session.find(params[:id])
+        render json: session
+    end
+
     def create
         session = Session.create(score: 0, user_id: params[:dataId])
 
