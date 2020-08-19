@@ -10,8 +10,7 @@ class SessionsController < ApplicationController
     end
 
     def create
-        session = Session.create(score: 0, user_id: params[:dataId])
-
+        session = Session.create(score:0, user_id: params[:dataId])
         render json: session
     end
     
