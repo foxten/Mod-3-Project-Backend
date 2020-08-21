@@ -2,8 +2,8 @@ Graph.destroy_all
 
 Graph.create(image_url: 'https://imgur.com/9iAX9yK', equation: 'y = 2x + 3', m: 2, b: 3)
 Graph.create(image_url: 'https://imgur.com/0kG4JIn', equation: 'y = -5x + 6', m: -5, b: 6)
-Graph.create(image_url: 'https://imgur.com/rJCME5B', equation: 'y = -2x - 4', m: -2, b: 4)
-Graph.create(image_url: 'https://imgur.com/NGnUTtd', equation: 'y = 5x - 3', m: 5, b: 3)
+Graph.create(image_url: 'https://imgur.com/rJCME5B', equation: 'y = -2x - 4', m: -2, b: -4)
+Graph.create(image_url: 'https://imgur.com/NGnUTtd', equation: 'y = 5x - 3', m: 5, b: -3)
 Graph.create(image_url: 'https://imgur.com/n7R1UPd', equation: 'y = 7x + 2', m: 7, b: 2)
 Graph.create(image_url: 'https://imgur.com/raLS4Xl', equation: 'y = -4x + 7', m: -4, b: 7)
 Graph.create(image_url: 'https://imgur.com/kg2fz5H', equation: 'y = 8x - 5', m: 8, b: -5)
